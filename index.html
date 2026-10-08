@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#edf1e9">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="循练">
+  <meta name="description" content="每日器械训练、恢复、饮食与记录。">
+  <title>循练 · 今天练什么</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="app.css">
+  <script src="core.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar"><a class="brand" href="#today" aria-label="循练首页"><span class="brand-mark">↗</span><span>循练<small>DAY BY DAY</small></span></a><span class="header-tag">新手 · 器械计划</span></header>
+    <div id="storage-warning" class="notice warn" hidden>当前浏览器无法保存记录。请使用 Safari 普通模式，并及时导出备份。</div>
+    <main id="main" tabindex="-1"></main>
+    <footer class="page-footer">慢慢变强，也好好生活。<span>记录保存在当前设备 · 无需注册</span></footer>
+  </div>
+  <aside id="timer" class="timer-bar" hidden aria-label="组间休息计时"><span>组间休息 <strong id="timer-left">01:30</strong></span><button id="timer-add" type="button">+30 秒</button><button id="timer-stop" type="button">结束</button></aside>
+  <nav class="bottom-nav" aria-label="主导航">
+    <a href="#today" data-tab="today"><span aria-hidden="true">◉</span>今日</a>
+    <a href="#train" data-tab="train"><span aria-hidden="true">↗</span>训练</a>
+    <a href="#food" data-tab="food"><span aria-hidden="true">◒</span>饮食</a>
+    <a href="#history" data-tab="history"><span aria-hidden="true">▥</span>记录</a>
+    <a href="#plan" data-tab="plan"><span aria-hidden="true">☷</span>计划</a>
+  </nav>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <noscript>请用启用 JavaScript 的 Safari 打开，才能查看今日计划和保存记录。</noscript>
+</body>
+</html>
